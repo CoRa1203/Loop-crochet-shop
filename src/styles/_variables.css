@@ -1,0 +1,101 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --text-primary-black: rgb(11, 6, 0);
+  --text-secondary-white: rgba(252, 250, 247, 1);
+  --text-tertiary-grey: rgba(145, 149, 153, 1);
+  --text-quaternary-grey-light: rgba(222, 220, 217, 1);
+  --accent-brown: rgba(123, 87, 39, 1);
+  --accent-brown-40: rgba(123, 87, 39, 0.4);
+  --accent-brown-20: rgba(123, 87, 39, 0.2);
+  --accent-brown-light: rgba(209, 180, 140, 1);
+  --accent-brown-light-20: rgba(209, 180, 140, 0.2);
+  --error: rgba(177, 29, 15, 1);
+  --success: rgba(85, 177, 15, 1);
+  /* // Spacing  */
+--spacing-0: 0;
+/* // 4px */
+--spacing-1: 0.25rem;   
+ /* // 8px */
+--spacing-2: 0.5rem;   
+ /* // 12px */
+--spacing-3: 0.75rem;  
+/* // 16px */
+--spacing-4: 1rem;      
+/* // 20px */
+--spacing-5: 1.25rem; 
+/* // 24px */
+--spacing-6: 1.5rem;    
+/* // 32px */
+--spacing-8: 2rem;     
+  /* // 48px  */
+--spacing-12: 3rem;  
+ /* // 64px  */
+--spacing-16: 4rem;   
+ /* // 96px  */
+--spacing-24: 6rem;   
+/* // 128px  */
+--spacing-32: 8rem;  
+/* // 160px    */
+--spacing-40: 10rem;    
+
+
+/* // Typography */
+--font-family-body: "Lora", serif;
+--font-weight-reg: 400;
+--font-weight-bold: 700;
+
+/* // Размеры текста (body) */
+/* // 12px */
+--font-body-size-2xs: 0.75rem;   
+/* // 14px */
+--font-body-size-xs: 0.875rem;   
+/*  // 16px */
+--font-body-size-s: 1rem; 
+/* // 20px       */
+--font-body-size-m: 1.25rem;
+/* // 24px      */
+--font-body-size-l: 1.5rem;  
+  /* // 32px     */
+--font-body-size-xl: 2rem;     
+
+/* // Семейство и размеры заголовков */
+--font-family-title: "Caveat", serif;
+ /* // 20px */
+--font-title-size-xs: 1.25rem;  
+/* // 24px */
+--font-title-size-s: 1.5rem;     
+  /* // 32px */
+--font-title-size-m: 2rem;     
+ /* // 40px */
+--font-title-size-l: 2.5rem;   
+/* // 48px  */
+--font-title-size-xl: 3rem;      
+/* // 64px */
+--font-title-size-2xl: 4rem;     
+  /* // 96px */
+--font-title-size-3xl: 6rem;   
+
+/* // Radius */
+/* // 8px */
+--radius-s: 0.5rem;    
+ /* // 12px */
+--radius-m: 0.75rem;   
+ /* // 16px */
+--radius-l: 1rem;      
+
+
+/* // SVG / Icon sizes */
+/* // 24px */
+--small: 1.5rem;      
+   /* // 32px   */
+--medium: 2rem;    
+ /* // 36px   */
+--large: 2.25rem;  
+ /* // 60px     */
+--xlarge: 3.75rem;     
+
+/* // Border/shadows */
+--boxShadow: 0px 0px 16px rgba(209, 180, 140, 0.5);
+
+}
