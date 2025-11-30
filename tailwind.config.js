@@ -9,10 +9,10 @@ module.exports = {
   theme: {
     extend: {fontFamily: {
         // Основной шрифт (для body, параграфов и т.д.)
-        sans: ['var(--font-lora-sans)', 'sans-serif'],
+        sans: ['var(--font-Montserrat-sans)', 'sans-serif'],
         
-        // Шрифт для заголовков
-        heading: ['var(--font-caveat-sans)', 'serif'],
+        // // Шрифт для заголовков
+        // heading: ['var(--font-caveat-sans)', 'serif'],
       },},
   },
   plugins: [],

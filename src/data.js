@@ -29,8 +29,9 @@ export const mockData = {
       "description": "Описание кролика в фиолетовом комбенезоне",
       "fullPrice": 1500,
       "discounPercent": 20,
-      "rating": { "rate": 4.9, "count": 4 },
-      "categories": ["sales", "popular", "toys"],
+      // "rating": { "rate": 4.9, "count": 4 },
+       "rating": 5,
+      "categories": ["sales",  "toys"],
       "weight": "100 г"
     },
     {
@@ -40,7 +41,8 @@ export const mockData = {
       "description": "Описание мишки в комбенезоне",
       "fullPrice": 1300,
       "discounPercent": 41,
-       "rating": { "rate": 4.1, "count": 4 },
+      //  "rating": { "rate": 4.1, "count": 4 },
+       "rating": 5,
       "categories": ["sales", "popular", "toys"],
       "weight": "100 г"
     },
@@ -82,12 +84,12 @@ export const mockData = {
     {
       "id": 6,
       "image": "/img/products/Комплект белый(варежки, шапка).jpg",
-      "title": "Комплект белый (варежки, шапка)",
+      "title": "Комплект белый",
       "description": "Описание rомплекта белого (варежки, шапка)",
       "fullPrice": 1950,
       "discounPercent": 0,
       "rating": 5,
-      "categories": ["new", "popular", "cloth"],
+      "categories": ["new", "cloth"],
       "weight": "100 г"
     },
     {
@@ -120,7 +122,7 @@ export const mockData = {
       "fullPrice": 700,
       "discounPercent": 0,
       "rating": 5,
-      "categories": ["new", "popular", "cloth"],
+      "categories": ["new", "cloth"],
       "weight": "100 г"
     },
     {
@@ -135,4 +137,16 @@ export const mockData = {
       "weight": "100 г"
     }
   ]
+}
+
+
+function reducer (state, action){
+  
+}
+
+function App(){
+  const [state, dispatch] = useReduser(reducer, initialData)
+  return(
+    <></>
+  )
 }

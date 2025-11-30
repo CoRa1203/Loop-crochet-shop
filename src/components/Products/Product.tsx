@@ -1,30 +1,60 @@
 'use client'
 import { useContext } from "react";
 import Button from "../UI/Button";
-import { contextProduct } from "@/providers/cartProveder";
+import { contextProduct } from "@/providers/cartProductAmountProvider";
 import Link from "next/link";
 import Image from "next/image";
 import { productType } from "@/types/productType";
+import { cartContex } from "@/providers/cartProvider";
+import { useCart } from "@/hooks/useCart";
 
-export default function Product({ image,
+type FilledShoppingCartProp = productType & {
+    quantity?: number;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+export default function Product({ 
+  id, 
+  image,
   title,
   description,
   fullPrice,
   discounPercent,
-  rating, }: productType) {
+  rating, 
+  quantity
+   }: FilledShoppingCartProp ) {
 
   const ProductContext = useContext(contextProduct)
   const setProductCount = ProductContext?.setProductCount
+  // const dispatchFunction = useContext(cartContex)
+  // const dispatch = dispatchFunction?.dispatch
+  const { dispatch } = useCart();
 
-  function addProduct() {
-    setProductCount?.((prev: number) => prev + 1)
+  // const dispatch = cartContext;
+
+
+  function addToCart() {
+    setProductCount?.((prev: number) => prev + 1);
+    dispatch({
+      type: 'ADD_PRODUCT',
+      payload: {
+        id,
+        image,
+        title,
+        description,
+        fullPrice,
+        discounPercent,
+        rating,
+        quantity
+      },
+    });
   }
 
-
+  //  
   return (
-    <article className="productCart">
+    <article className="w-full">
       <Link href='/productCart'>
-        <div className="w-[392px] h-[438px] overflow-hidden">
+        <div className="h-[438px] overflow-hidden">
           <Image
             src={image}
             width={392}
@@ -37,12 +67,11 @@ export default function Product({ image,
         <p className="cartDesc">{description}</p>
         <div className="flex gap-[--spacing-1]">
           <p className="">{fullPrice}</p>
-          <p>{discounPercent}</p>
+          {/* <p>{discounPercent}</p> */}
         </div>
-
-        <p>{rating}</p>
       </Link>
-       <Button onClick={addProduct}>Добавить в корзину</Button>
+      <p>{rating}</p>
+      <Button onClick={addToCart}>Добавить в корзину</Button>
     </article>
   )
 } 

@@ -5,7 +5,8 @@
 
 
 :root {
-  --background: #ffffff;
+  --background: rgba(252, 250, 247, 1);
+  --background-80: rgba(252, 250, 247, 0.8);
   --foreground: #171717;
   --text-primary-black: rgb(11, 6, 0);
   --text-secondary-white: rgba(252, 250, 247, 1);
@@ -19,6 +20,7 @@
   --error: rgba(177, 29, 15, 1);
   --success: rgba(85, 177, 15, 1);
   /* // Spacing  */
+  /* // 0px */
 --spacing-0: 0;
 /* // 4px */
 --spacing-1: 0.25rem;   
@@ -47,7 +49,7 @@
 
 
 /* // Typography */
---font-family-body: "Lora", serif;
+/* --font-family-body: "Lora", serif; */
 --font-weight-reg: 400;
 --font-weight-bold: 700;
 
@@ -68,21 +70,21 @@
 --font-body-size-xl: 2rem;     
 
 /* // Семейство и размеры заголовков */
---font-family-title: "Caveat", serif;
+/* --font-family-title: "Caveat", serif; */
  /* // 20px */
---font-title-size-xs: 1.25rem;  
+--font-title-size-xs: 1rem;  
 /* // 24px */
---font-title-size-s: 1.5rem;     
+--font-title-size-s: 1.25rem;     
   /* // 32px */
---font-title-size-m: 2rem;     
+--font-title-size-m: 1.5rem;     
  /* // 40px */
---font-title-size-l: 2.5rem;   
+--font-title-size-l: 2rem;   
 /* // 48px  */
---font-title-size-xl: 3rem;      
+--font-title-size-xl: 2.5rem;      
 /* // 64px */
---font-title-size-2xl: 4rem;     
+--font-title-size-2xl: 3rem;     
   /* // 96px */
---font-title-size-3xl: 6rem;   
+--font-title-size-3xl: 4rem;   
 
 /* // Radius */
 /* // 8px */
@@ -108,6 +110,61 @@
 
 }
 
+/* @media (max-width: 768px) {
+  :root {
+    --spacing-12: 2.5rem;   
+    --spacing-16: 3.5rem;   
+    --spacing-24: 5rem;     
+    --spacing-32: 6.5rem;   
+    --spacing-40: 8rem;     
+    --font-title-size-l: 2rem;      
+    --font-title-size-xl: 2.5rem;    
+    --font-title-size-2xl: 3rem;     
+    --font-title-size-3xl: 4rem;     
+    --font-body-size-xl: 1.75rem;    
+  }
+} */
+
+/* @media (min-width: 1920px) {
+  :root {
+   
+    --spacing-1:  clamp(0.25rem, 0.3vw, 0.375rem);
+    --spacing-2:  clamp(0.5rem, 0.6vw, 0.75rem);
+    --spacing-3:  clamp(0.75rem, 0.9vw, 1rem);
+    --spacing-4:  clamp(1rem, 1.2vw, 1.5rem);
+    --spacing-5:  clamp(1.25rem, 1.5vw, 1.75rem);
+    --spacing-6:  clamp(1.5rem, 1.8vw, 2.25rem);
+    --spacing-8:  clamp(2rem, 2.4vw, 3rem);
+    --spacing-12: clamp(3rem, 3.6vw, 4.5rem);
+    --spacing-16: clamp(4rem, 4.8vw, 6rem);
+    --spacing-24: clamp(6rem, 7.2vw, 8rem);
+    --spacing-32: clamp(8rem, 9.6vw, 10rem);
+    --spacing-40: clamp(10rem, 12vw, 12rem);
+
+   
+    --font-body-size-3xs: clamp(0.625rem, 0.75vw, 0.75rem);
+    --font-body-size-2xs: clamp(0.75rem, 0.9vw, 0.875rem);
+    --font-body-size-xs:  clamp(0.875rem, 1.1vw, 1rem);
+    --font-body-size-s:   clamp(1rem, 1.3vw, 1.25rem);
+    --font-body-size-m:   clamp(1.25rem, 1.6vw, 1.75rem);
+    --font-body-size-l:   clamp(1.5rem, 2vw, 2.25rem);
+    --font-body-size-xl:  clamp(2rem, 2.6vw, 3rem);
+
+    --font-title-size-xs: clamp(1.25rem, 1.6vw, 1.75rem);
+    --font-title-size-s:  clamp(1.5rem, 2vw, 2.25rem);
+    --font-title-size-m:  clamp(2rem, 2.6vw, 3rem);
+    --font-title-size-l:  clamp(2.5rem, 3.2vw, 4rem);
+    --font-title-size-xl: clamp(3rem, 4vw, 5rem);
+    --font-title-size-2xl: clamp(4rem, 5.2vw, 6rem);
+    --font-title-size-3xl: clamp(6rem, 7.8vw, 8rem);
+
+   
+    --small:   clamp(1.5rem, 1.9vw, 2rem);
+    --medium:  clamp(2rem, 2.6vw, 2.75rem);
+    --large:   clamp(2.25rem, 3vw, 3.25rem);
+    --xlarge:  clamp(3.75rem, 5vw, 5.5rem);
+  }
+} */
 /* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -133,9 +190,10 @@
           color: var(--text-secondary-white);
 
         }
-        .customFlex{
+        .customCenterFlex{
           display: flex;
-          gap: var(--spacing-5);
+          justify-content: center;
+          align-items: center;
         }
         .body-text-small{
           font-size: var(--font-body-size-s);
@@ -145,6 +203,7 @@
             @apply bg-cover bg-center bg-no-repeat;
         }
         .iconCustom{
+          padding: var(--spacing-2);
           color:var(--accent-brown);
           border-radius: var(--radius-s);
           @apply hover:text-[var(--accent-brown-light)] transition-colors duration-500;
@@ -152,7 +211,7 @@
          .textCustom{
          @apply hover:text-[var(--accent-brown)] transition-colors duration-500;
       }
-      .btnCustom{
+      .btnCustom{   
         background-color: var(--accent-brown);
         color: var(--text-secondary-white);
         @apply w-44 h-10 hover:bg-[var(--accent-brown-light)] transition-colors duration-500
@@ -175,41 +234,66 @@
         padding: 0 4px;
       }
       h1, h2, h3, h4, h5, h6 {
-     @apply font-heading;
+     /* @apply font-heading; */
+     font-weight: var(--font-weight-bold);
+     
     }
   h1{
-    font-size: var(--font-title-size-2xl);
+    font-size: var(--font-title-size-xl);
     color: var(--accent-brown);
   }
   h2{
-    font-size: var(--font-title-size-xl);
+    font-size: var(--font-title-size-l);
     color: var(--accent-brown);
   }
   h3{
      font-size: var(--font-title-size-m);
   }
+   h4{
+     font-size: var(--font-title-size-s);
+  }
+  h5{
+     font-size: var(--font-title-size-xs);
+  }
+
   .textSmall{
     font-size: var(--font-body-size-xs);
     color: var(--text-tertiary-grey);
   }
-  .productCart{
-    width: 24.5rem;
-    /* height: 33.75rem; */
-  }
+  /* .productCart{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  } */
 
   .container{
     display: flex;
     flex-direction: column;
     max-width: 76.5rem;
   }
+
+  .pageContainer{
+    margin: 5rem auto;
+    gap: var(--spacing-6);
+  }
+  .productContainer{  
+    max-width: 76.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-5);
+    
+  }
+
       }
      
       html,
       body {
   background: var(--background);
   color: var(--foreground);
-   height: 100%;
-  overflow-x: hidden;
+
+
     -ms-overflow-style: none;
   scrollbar-width: none;
 }
