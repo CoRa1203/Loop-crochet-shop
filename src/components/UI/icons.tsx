@@ -276,7 +276,7 @@ export const Delete: React.FC<IconSvgProps> = ({
   );
 };
 
-export const Decrease: React.FC<IconSvgProps> = ({
+export const Minus: React.FC<IconSvgProps> = ({
   size = 24,
   width,
   height,
@@ -292,7 +292,7 @@ export const Decrease: React.FC<IconSvgProps> = ({
   );
 };
 
-export const Increase: React.FC<IconSvgProps> = ({
+export const Plus: React.FC<IconSvgProps> = ({
   size = 24,
   width,
   height,

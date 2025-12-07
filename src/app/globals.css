@@ -216,6 +216,9 @@
         color: var(--text-secondary-white);
         @apply w-44 h-10 hover:bg-[var(--accent-brown-light)] transition-colors duration-500
       }
+      .hover{
+        @apply hover:bg-[var(--accent-brown-light)] transition-colors duration-500
+      }
       .floatingEl{
          position: absolute;
         top: -4px;
@@ -272,6 +275,7 @@
     display: flex;
     flex-direction: column;
     max-width: 76.5rem;
+
   }
 
   .pageContainer{
@@ -281,8 +285,9 @@
   .productContainer{  
     max-width: 76.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: var(--spacing-5);
+    /* align-self: start; */
     
   }
 
@@ -292,8 +297,6 @@
       body {
   background: var(--background);
   color: var(--foreground);
-
-
     -ms-overflow-style: none;
   scrollbar-width: none;
 }

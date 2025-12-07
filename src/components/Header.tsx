@@ -31,7 +31,7 @@ export default function Header() {
             <Link href='/' className="pl-2 pr-2 textCustom"><li>Контакты</li></Link>
           </ul>
         </nav>
-        <div className="flex gap-[--spacing-5]">
+        <div className="flex gap-[--spacing-4]">
           <Button btnIcon onClick={onClick}><Search /></Button>
           <Button btnIcon onClick={onClick}><Login /></Button>
           <Button btnIcon onClick={onClick}><Favorite /></Button>

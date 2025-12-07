@@ -11,12 +11,13 @@ export default function EmptyShoppingCart() {
             </div>
 
             <div className="flex flex-col gap-[--spacing-5]">
-                <Link href='/Products'>
+                {/* TODO при переходе по ссылкам не закрывается модалка */}
+                <Link href='/products'>
                 <Button>
                     Наш магазин
                 </Button>
 </Link>
-                <Link href='/BestSellers'>
+                <Link href='/bestSellers'>
                     <Button>
                         Популярные товары
                     </Button>

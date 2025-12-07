@@ -5,7 +5,6 @@ import { contextProduct } from "@/providers/cartProductAmountProvider";
 import Link from "next/link";
 import Image from "next/image";
 import { productType } from "@/types/productType";
-import { cartContex } from "@/providers/cartProvider";
 import { useCart } from "@/hooks/useCart";
 
 type FilledShoppingCartProp = productType & {
@@ -53,7 +52,7 @@ export default function Product({
   //  
   return (
     <article className="w-full">
-      <Link href='/productCart'>
+      <Link href={`/products/${id}`}>
         <div className="h-[438px] overflow-hidden">
           <Image
             src={image}

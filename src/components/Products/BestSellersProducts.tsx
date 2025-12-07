@@ -1,11 +1,10 @@
 
-import { mockData } from '@/data'
+import { mockData } from '@/data/сartData'
 import Link from "next/link";
 import Product from "./Product";
 
 export default function BestSellersProducts() {
-    const bestSellers = mockData.products.filter((product) => product.categories.includes('popular'))
-
+     const bestSellers = mockData.products.filter((product) => product.popularity > 4.9)
     const isVisible = bestSellers.slice(0, 3)
 
     return (
@@ -15,7 +14,7 @@ export default function BestSellersProducts() {
                 <Link className="textSmall hover:text-[--accent-brown]" href='/bestSellers'>смотреть все</Link>
             </div>
             <div className="flex gap-6">
-                {isVisible.map((product) => <Product key={product.id} {...product}/>)}
+                {isVisible.map((product) => <Product key={product.id} {...product} />)}
             </div>
         </div>
     )

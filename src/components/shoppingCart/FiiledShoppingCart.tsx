@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Button from "../UI/Button";
-import { Decrease, Delete, Increase } from "../UI/icons";
+import { Decrease, Delete, Increase, Minus, Plus } from "../UI/icons";
 import { productType } from "@/types/productType";
 import Image from "next/image";
 import { useCart } from "@/hooks/useCart";
@@ -66,9 +66,9 @@ export default function FilledShoppingCart({ id,
                             <p>{description}</p>
                         </div>
                         <div className="inline-flex items-center bg-[--accent-brown-20] gap-[--spacing-2]">
-                            <Button btnIcon onClick={decreaseProduct} ><Decrease /></Button>
+                            <Button btnIcon onClick={decreaseProduct} ><Minus /></Button>
                             <p>{quantity}</p>
-                            <Button btnIcon onClick={increaseProduct}><Increase /></Button>
+                            <Button btnIcon onClick={increaseProduct}><Plus /></Button>
                         </div>
                     </div>
                 </div>
